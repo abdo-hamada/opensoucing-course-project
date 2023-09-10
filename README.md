@@ -1,2 +1,2 @@
 # opensourcing-course-project
-opensoucing project with git and github
+opensourcing project with git and github
