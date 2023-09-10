@@ -59,3 +59,15 @@ function checkWins (){
         }
     })
 }
+function NoWins(){
+    allSquares= document.querySelectorAll('.square');
+    
+    noWins =Array(...allSquares).every(square=>{
+        return square.firstChild ? true: false;
+    })
+    if(noWins){
+        events.textContent = `no one won ! `
+        reload.textContent = 'AGAIN'       
+        events.classList.add('no-one');
+    }
+}
