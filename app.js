@@ -1,5 +1,6 @@
 const gameBoard= document.querySelector('#game')
 const events= document.querySelector('#events')
+const reload = document.querySelector('.reload')
 const arr = new Array(9).fill(0,0,9)
 console.log(arr)
 let role = 'circle'
@@ -69,5 +70,15 @@ function NoWins(){
         events.textContent = `no one won ! `
         reload.textContent = 'AGAIN'       
         events.classList.add('no-one');
+    }
+}
+
+reload.onclick=function(){
+    if(window.crossWins || window.circleWins){
+        window.location.reload()
+    }else{
+        if(confirm('the game will be restarted')){
+            window.location.reload();
+        }
     }
 }
