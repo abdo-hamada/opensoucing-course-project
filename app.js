@@ -12,3 +12,12 @@ events.textContent = `${role} goes first !`
         square.addEventListener('click',addGo)
     })
 
+
+    function addGo(e){
+        const goItem = document.createElement('div');
+        goItem.classList.add(role ==='circle'?"circle":'cross');
+        goItem.classList.contains('circle')?role='cross':role='circle';
+        e.target.appendChild(goItem);
+        e.target.removeEventListener('click',addGo)
+        events.textContent = `${role} goes !`
+    }
